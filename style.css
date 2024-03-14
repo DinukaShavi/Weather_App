@@ -1,0 +1,248 @@
+:root {
+    --bg-color1: #212529;
+    --bg-color2: #2a2b2d;
+    --current-location-btn-color: #ea644b;
+    --aqi-1: #89E589;
+    --aqi-2: #E5DD89;
+    --aqi-3: #E5C089;
+    --aqi-4: #E58989;
+    --aqi-5: #ef5350;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 0 15px;
+    background-image: url('pd.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.clock{
+    font-size: 20px;
+}
+
+.hero {
+    margin: 10px;
+}
+
+.weather-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.weather-input #city_input {
+    background-color: var(--bg-color2);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.weather-input #searchBtn {
+    margin-left: 10px;
+    background-color: var(--bg-color2);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.weather-input #locationBtn {
+    margin-left: 10px;
+    background-color: var(--current-location-btn-color);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.card {
+    background-color: var(--bg-color2);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+.weather-data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.weather-left {
+    grid-column: span 1;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.current-weather h2 {
+    margin: 7px 0;
+}
+
+.current-weather p {
+    color: #fff;
+}
+
+.card-footer p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.forecast-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin-bottom: 15px;
+}
+
+.forecast-item .icon-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.weather-right {
+    grid-column: span 3;
+}
+
+.weather-right h2 {
+    margin-bottom: 10px;
+}
+
+.weather-right .highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+}
+
+.weather-right .card:nth-of-type(1),
+.weather-right .card:nth-of-type(2) {
+    grid-column: span 2;
+}
+
+.weather-right .card-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.weather-right .air-index {
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.weather-right .aqi-1 {
+    background-color: var(--aqi-1);
+}
+
+.weather-right .aqi-2 {
+    background-color: var(--aqi-2);
+}
+
+.weather-right .aqi-3 {
+    background-color: var(--aqi-3);
+}
+
+.weather-right .aqi-4 {
+    background-color: var(--aqi-4);
+}
+
+.weather-right .aqi-5 {
+    background-color: var(--aqi-5);
+}
+
+
+.air-indices {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+.sunrise-sunset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sunrise-sunset .items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hum-card-item {
+    display: flex;
+    align-items: center;
+}
+
+.hum-card-item i {
+    margin-right: 20px;
+}
+
+
+.hourly-forecast,
+.hourly-forecast-wind {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 10px;
+}
+
+.hourly-forecast .tdcard,
+.hourly-forecast-wind .tdcard {
+    background-color: var(--bg-color2);
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.hourly-forecast .tdcard {
+    margin-bottom: 15px;
+}
+
+.hourly-forecast-wind .tdcard {
+    padding: 20px;
+
+    & i {
+        padding: 8px;
+    }
+}
