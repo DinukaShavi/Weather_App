@@ -1,12 +1,13 @@
 :root {
     --bg-color1: #212529;
     --bg-color2: #2a2b2d;
-    --current-location-btn-color: #ea644b;
+    --current-location-btn-color: rgb(246, 99, 53);
     --aqi-1: #89E589;
     --aqi-2: #E5DD89;
     --aqi-3: #E5C089;
     --aqi-4: #E58989;
     --aqi-5: #ef5350;
+    --white-blur: rgba(255, 255, 255, 0.3); 
 }
 
 * {
@@ -18,10 +19,10 @@
 
 body {
     min-height: 100vh;
-    color: #fff;
+    color: #000000;
     font-family: sans-serif;
     padding: 0 15px;
-    background-image: url('pd.png');
+    background-image: url('pdfk.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -29,13 +30,15 @@ body {
 .header {
     position: sticky;
     top: 0;
-    background-color: var(--bg-color1);
+    background-color: var(--white-blur); 
+    backdrop-filter: blur(30px); 
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
     padding: 15px 0;
     width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .clock{
@@ -52,42 +55,56 @@ body {
 }
 
 .weather-input #city_input {
-    background-color: var(--bg-color2);
     border: none;
     padding: 12px;
     font-size: 16px;
     border-radius: 25px;
     color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+}
+
+.weather-input #city_input::placeholder {
+    color: var(--bg-color2)
 }
 
 .weather-input #searchBtn {
     margin-left: 10px;
-    background-color: var(--bg-color2);
+    background-color: var(--white-blur);
     border: none;
     padding: 12px;
     font-size: 16px;
     border-radius: 25px;
-    color: #fff;
+    color: var(--bg-color2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .weather-input #locationBtn {
     margin-left: 10px;
-    background-color: var(--current-location-btn-color);
+    background-color: var(--bg-color1);
     border: none;
     padding: 12px;
     font-size: 16px;
     border-radius: 25px;
     color: #fff;
+    margin-right: 5px;
 }
 
 .card {
-    background-color: var(--bg-color2);
+    background-color: var(--white-blur); 
     padding: 15px;
     border-radius: 15px;
     margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2); 
 }
 
-
+.forecast-card {
+    background-color: var(--white-blur);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+}
 
 .weather-data {
     display: grid;
@@ -111,7 +128,7 @@ body {
 }
 
 .current-weather p {
-    color: #fff;
+    color: #000000;
 }
 
 .card-footer p {
@@ -132,14 +149,17 @@ body {
     align-items: center;
 }
 
-
-
 .weather-right {
     grid-column: span 3;
 }
 
 .weather-right h2 {
     margin-bottom: 10px;
+    color: #000;
+}
+
+.weather-right .top{
+    color: #fff;
 }
 
 .weather-right .highlights {
@@ -185,7 +205,6 @@ body {
     background-color: var(--aqi-5);
 }
 
-
 .air-indices {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -217,7 +236,6 @@ body {
     margin-right: 20px;
 }
 
-
 .hourly-forecast,
 .hourly-forecast-wind {
     display: grid;
@@ -227,12 +245,14 @@ body {
 
 .hourly-forecast .tdcard,
 .hourly-forecast-wind .tdcard {
-    background-color: var(--bg-color2);
+    background-color: var(--white-blur);
+    backdrop-filter: blur(30px); 
     text-align: center;
-    color: #fff;
+    color: #000000;
     padding: 15px;
     border-radius: 15px;
     text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .hourly-forecast .tdcard {
@@ -244,5 +264,9 @@ body {
 
     & i {
         padding: 8px;
+        color: #000000;
     }
 }
+
+
+
